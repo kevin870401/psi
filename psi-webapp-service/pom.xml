@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.pis</groupId>
+    <artifactId>psi-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>psi-webapp-service</artifactId>
+  <packaging>war</packaging>
+  <name>psi-webapp-service Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+    <properties>
+      <org.springframework.version>3.2.8.RELEASE</org.springframework.version>
+	</properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>${project.groupId}</groupId>
+    	<artifactId>psi-core</artifactId>
+    	<version>${project.version}</version>
+    </dependency>
+  	
+	<!-- Struts 2 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.1.8</version>
+    </dependency>
+
+
+	<!-- Spring framework --> 
+		<!-- Spring 3 dependencies -->
+		  <!-- Spring 3 dependencies -->
+  <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-core</artifactId>
+  <version>${org.springframework.version}</version>
+  </dependency>
+ 
+  <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context</artifactId>
+  <version>${org.springframework.version}</version>
+  </dependency>
+   <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context-support</artifactId>
+  <version>${org.springframework.version}</version>
+  </dependency>
+   <dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-tx</artifactId>
+  <version>${org.springframework.version}</version>
+  </dependency>
+  <dependency>  
+<groupId>org.springframework</groupId>
+ <artifactId>spring-orm</artifactId>   
+  <version>${org.springframework.version}</version>
+</dependency> 
+	<!-- Struts 2 + Spring plugins -->
+ <dependency>
+	<groupId>org.apache.struts</groupId>
+	<artifactId>struts2-spring-plugin</artifactId>
+	<version>2.3.4</version>
+  </dependency>
+	
+	
+  </dependencies>
+  <build>
+    <finalName>psi-webapp-service</finalName>
+  </build>
+</project>

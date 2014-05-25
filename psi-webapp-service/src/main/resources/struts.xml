@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+ 	<constant name="struts.devMode" value="true" />
+ 	
+	<package name="default" namespace="/" extends="struts-default">
+		    <default-action-ref name="listVipAction"/>
+		<action name="login" 
+			class="vipAction" method="addVip" >
+		    <result name="success">pages/customer.jsp</result>
+		</action>
+		<action name="addVipAction" 
+			class="vipAction" method="addVip" >
+		    <result name="success">pages/customer.jsp</result>
+		    <result name="failed">pages/login.jsp</result>
+		</action>
+		<action name="listVipAction"
+			class="vipAction" method="listVip" >
+		    <result name="success">pages/customer.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>

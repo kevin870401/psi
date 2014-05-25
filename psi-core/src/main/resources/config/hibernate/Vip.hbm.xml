@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Julai 2010 11:40:18 AM by Hibernate Tools 3.2.5.Beta -->
+<hibernate-mapping>
+    <class name="com.psi.core.model.Vip" 
+		table="sys_vip" catalog="psi">
+        <id name="vipId" type="java.lang.Long">
+            <column name="VIP_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="45" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" not-null="true" />
+        </property>
+                <property name="email" type="string">
+            <column name="EMAIL" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
